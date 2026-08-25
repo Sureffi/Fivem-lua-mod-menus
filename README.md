@@ -28,12 +28,6 @@ scratch** — the `Curse.*` API: `CreateMenu` / `CreateSubMenu`, `Button`,
 option count, and menu-button sounds. Fewer features than Motion, but a real
 reusable widget toolkit underneath them rather than a pile of draw calls.
 
-## Why they're here
-
-I keep these because the pattern I still work in started in these files: take
-apart an undocumented host, then build a UI/render layer on top of it. Curse is
-an immediate-mode UI toolkit for a game I didn't have the source to. Years
-later I'd do the same move to a terminal. Same instinct, bigger host.
 
 *Author credit inside the files reads "Sureffi"; the original handle has been
 scrubbed.*
