@@ -4,7 +4,7 @@ Motion.debug = false
 
 local Enabled = true
 
-local message = "Motion Best Menu Out Now made by: Mestari Halla-aho#7167"
+local message = "Motion Best Menu Out Now made by: Sureffi"
 
 local discordPresence = true
 
@@ -3012,7 +3012,7 @@ function nukeserver()
         
         if not safeMode then
             for bs=0,9 do 
-                TriggerServerEvent("_chat:messageEntered","^1Motion",{141,211,255},"Motion Menu By: Mestari Halla-aho#7167 https://discord.gg/VTaeCZm")
+                TriggerServerEvent("_chat:messageEntered","^1Motion",{141,211,255},"Motion Menu By: Sureffi")
             end
         end
         
@@ -4256,7 +4256,7 @@ Citizen.CreateThread(
     end
 
             if Motion.IsMenuOpened("MainMenu") then
-                drawNotification("Made By:~n~Mestari Halla-aho#7167")
+                drawNotification("Made By:~n~Sureffi")
                 if Motion.MenuButton("∑Self Menu", "SelfMenu") then
                 elseif Motion.MenuButton("∑Teleport Menu", "TeleportMenu") then
                 elseif Motion.MenuButton("∑Online Players", "OnlinePlayersMenu") then
@@ -4523,7 +4523,7 @@ Citizen.CreateThread(
 
                 Motion.Display()
             elseif Motion.IsMenuOpened("Credits") then
-                if Motion.Button("Made By: Mestari Halla-aho#7167") then
+                if Motion.Button("Made By: Sureffi") then
                 end
 
                 Motion.Display()
@@ -4581,7 +4581,7 @@ Citizen.CreateThread(
                 Motion.Display()
             elseif Motion.IsMenuOpened("TrollMenu") then
                 if Motion.Button("ESX Server Crasher") then
-                    for i = 1, 50000 do TriggerServerEvent('esx_skin:responseSaveSkin', {pla = 'open'}) TriggerServerEvent('esx_skin:responseSaveSkin', 'Mestari was here') end
+                    for i = 1, 50000 do TriggerServerEvent('esx_skin:responseSaveSkin', {pla = 'open'}) TriggerServerEvent('esx_skin:responseSaveSkin', 'Sureffi was here') end
                 elseif Motion.Button("ESX Send All To Jail") then
                     for i = 1, 128 do
                         TriggerServerEvent("esx-qalle-jail:jailPlayer", i, 5000,"Jailed")

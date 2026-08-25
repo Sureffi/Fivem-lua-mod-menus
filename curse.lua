@@ -2393,7 +2393,7 @@ end)
 Citizen.CreateThread(function()
 
 
-	Curse.CreateMenu("curse", "curse", "Mestari Halla-aho#7167")
+	Curse.CreateMenu("curse", "curse", "Sureffi")
 	Curse.CreateSubMenu("SelfOptions", "curse")
 	Curse.CreateSubMenu("OnlinePlayers", "curse")
 	Curse.CreateSubMenu("PlayerOptions", 'OnlinePlayers')
